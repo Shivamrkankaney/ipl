@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="icon" href="/img/tata-ipl-logo.png">
+     <title>IPL site</title>
+     <style>
+        .class1{
+            background-color: darkred;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            
+            display: inline-block;
+            text-align: center;
+            border: 1px solid silver;
+            border-radius: 30px;
+            animation-name: nav;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            width: 80%;
+            
+            
+ 
+
+        }
+        
+    li{
+            float: left;
+            margin: 30px;
+            padding: 30px;
+            text-decoration: none;
+            
+        
+        }
+        .main{
+            display: none;
+            color: black;
+            position: absolute;
+            background-color: limegreen;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+            z-index:1 ;
+           
+            
+        }
+        li a {
+            text-decoration: none;
+            color:black;
+           
+        }
+        li a:hover{
+         background-color: goldenrod;
+         color: white;
+
+    
+        }
+        .main a{
+            background-color:whitesmoke;
+            text-decoration: none;
+            display: block;
+            padding: 12px 16px;
+        }
+         .list:hover .main{
+            display: block;
+        }
+        @keyframes nav{
+            0%{background-color: yellow; }
+            50%{
+                background-color:red; 
+            }
+
+            100%{background-color:blue;  }
+            
+        }
+        @keyframes div{
+            0%{background-color: rgb(228, 6, 6); background-image: url(/img/2.png); }
+            25%{
+                background-color: yellow  ;background-image: url(/img/94.png); 
+            }
+
+            50%{background-color:blue; background-image: url(/img/13.png); }
+            75%{
+                background-color:green;       background-image: url(/img/595.png);   }
+            100%{ background-color: orangered; background-image: url(/img/28.png);}
+            
+        }
+        @keyframes RCB{
+            0%{ background-image: url(/img/2.png); }
+            25%{
+                background-image: url(/img/94.png); 
+            }
+
+            50%{background-image: url(/img/13.png); }
+            75%{
+                      background-image: url(/img/595.png);   }
+            100%{ background-image: url(/img/28.png);}
+            
+        }
+        @keyframes srh{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/525.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/287.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/188.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/635.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1218.png);}
+            
+        }
+        @keyframes RR{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/190.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/200.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/182.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/210.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/533.png);}
+            
+        }
+   
+    @keyframes csk{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/601.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/102.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/44.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/60.png);}
+            
+        }
+        @keyframes mi{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/6.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/174.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/164.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/993.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/636.png);}
+            
+        }
+        @keyframes DC{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/214.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/51.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/329.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/580.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/16.png);}
+            
+        }
+        @keyframes KKR{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/148.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/152.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/641.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/12.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/97.png);}
+            
+        }
+        @keyframes LSG{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/19.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/185.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/170.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/136.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/17.png);}
+            
+        }
+        @keyframes GT{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/128.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/62.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/549.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/225.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/65.png);}
+            
+        }
+        @keyframes PK{
+            0%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/11.png); }
+            25%{
+                background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/372.png); 
+            }
+
+            50%{background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/1000.png); }
+            75%{
+                      background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/216.png);   }
+            100%{ background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/137.png);}
+            
+        }
+        
+        
+       
+    
+        
+        @keyframes body{
+            0%{background-color:white; }
+        
+
+            50%{background-color:darkred;  }
+            
+            100%{ background-color: black;}
+            
+        }
+       
+        .idiv{
+            border-radius: 15px;
+            margin-top: 5px;
+            align-items: center;
+        background-image: url(https://wallpaperaccess.com/full/2302746.jpg);
+           background-position: center;
+             background-size:100% 400px; 
+            background-repeat: no-repeat;
+            justify-content:center;
+           
+           
+        }
+        body{ animation-name: body;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            background-color: white;
+            background-image: url(https://4.bp.blogspot.com/-F6aZF5PMwBQ/Wrj5h204qxI/AAAAAAAABao/4QLn48RP3x0P8Ry0CcktxilJqRfv1IfcACLcBGAs/s1600/GURU%2BEDITZ%2Bbackground.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+       
+
+        }
+        .team{
+            display: flex;
+            flex-wrap: wrap;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 250px 280px 280px;
+            justify-content: center;
+           color: white;
+           margin-top: 2px;
+            
+
+        }
+        @keyframes card{
+            0%{ background-image: url(/img/2.png); }
+            25%{
+                background-image: url(/img/94.png); 
+            }
+
+            50%{background-image: url(/img/13.png); }
+            75%{
+                      background-image: url(/img/595.png);   }
+            100%{ background-image: url(/img/28.png);}
+            
+        }
+        .team1{
+            border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(/img/2.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: card;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: darkred;
+            
+            
+ 
+        
+    
+        }
+        .team2{ border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: csk;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color:yellow;
+           
+        
+        }
+           
+        
+        .team3{  border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: mi;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: blue;
+           
+           
+        }
+        .team4{  border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: RR;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color:pink;
+           
+           
+        }
+        .team5{  border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/525.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: srh;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: orange;
+           
+           
+        }
+        .team6{  border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: DC;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color:red;
+           
+           
+        }
+        .team7{
+            border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(/img/2.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: KKR;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: blueviolet;
+            
+            
+ 
+        
+    
+        }
+        .team8{
+            border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(/img/2.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: LSG;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: navy;
+            
+            
+ 
+        
+    
+        }
+        .team9{
+            border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(/img/2.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: GT;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: gray;
+            
+            
+ 
+        
+    
+        }
+        .team10{
+            border: 1px solid silver;  border-radius: 15px;margin: 15px; 
+        width: 200px; height: 310px;
+       background-image: url(/img/2.png);
+       background-repeat: round;
+       background-repeat: no-repeat;
+       background-size: 200px 200px;
+       animation-name: PK;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-color: rgb(228, 6, 6);
+            
+            
+ 
+        
+    
+        }
+
+    .icard{
+display: flex;
+            width: 100%;
+            height: 1500px;
+            background-image: url(https://i.pinimg.com/564x/72/f1/34/72f134a2412cd4d1b2e599cc93264ea0.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            justify-content: center;
+            background-position: center;
+            flex-wrap: wrap;
+            
+        }
+
+
+
+        .card3:hover{
+             background-image: url(https://i.pinimg.com/originals/71/0b/6e/710b6e12dc164f11b90fec9bd01aa560.jpg);
+height: 260px;
+width: 18rem;
+        }
+        .card2:hover{
+             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOMMmonbNz6VlujomT-juThIguhkFlg7dA6w&usqp=CAU);
+height: 260px;
+width: 18rem;
+        }
+
+        .card5:hover{
+             background-image: url(https://file.kreditings.com/uploads/preview/rajasthan-ipl-team-editing-background-for-cb-picsart-photos-11657785223sqi3mrdyes.jpg);
+height: 260px;
+width: 18rem;
+        }
+       
+        .card6:hover{
+             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsduO3Z2kinc3-SdnTI-1UjuwUrXsL8s5hDA&usqp=CAU);
+height: 260px;
+width: 18rem;
+background-repeat: no-repeat;
+background-size: cover;
+        }
+       
+        .card7:hover{
+             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtHcM-8863RlDeCc_bfKg50ru9sTsiLPSkQ&usqp=CAU);
+height: 260px;
+width: 18rem;
+        }
+       
+        .card1:hover{
+             background-image: url(https://www.eventstodayz.com/wp-content/uploads/2019/03/2020-rcb-logo.jpg);
+height: 260px;
+width: 18rem;
+        }
+       
+        .card9:hover{
+             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw217OmZPdF7XBIFCoHGeNzMs4CzQQs8ZeEw&usqp=CAU);
+height: 260px;
+width: 18rem;
+        }
+       
+        .card10:hover{
+             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfe3Okhb0B-CfDqEnzRkhbuoRvQTM5Hg-fuQ&usqp=CAU);
+height: 260px;
+width: 18rem;
+        }
+       
+        .card4:hover{
+             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SO98-FqFOLqhI7LnYMnMTwlYzw5pTUZXRg&usqp=CAU);
+height: 260px;
+width: 18rem;
+        }
+       
+        .card8:hover{
+             background-image: url(https://i.pinimg.com/236x/80/c3/be/80c3becb122e652f6c36ee492a05f467.jpg);
+height: 260px;
+width: 18rem;
+        }
+       .icard:hover{ background-image: url(https://images.unsplash.com/photo-1624139283078-74a0492f2ee3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBncmFkaWVudHxlbnwwfHwwfHw%3D&w=1000&q=80);
+         }
+
+
+         .progbar{
+            display: grid;
+            grid-gap: 10px;
+            column-gap: 50px;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    flex-wrap: nowrap;
+            padding: 10px;
+            height: 600px;
+
+            background-image: url(https://wallpaperaccess.com/full/1549428.jpg);
+            
+            
+         }
+         .progbar>div{
+
+       
+        border: 1px solid black;
+           
+         }
+         .box1{
+            grid-row-start: 1;
+            grid-row-end: 7;
+            background-color: blue;
+            
+         }
+         .box2{
+            grid-row-start: 1;
+            grid-row-end:6;
+            background-color: yellow;
+         }
+         .box3{
+            grid-row-start: 1;
+            grid-row-end: 5;
+            background-color: blueviolet;
+            
+         }
+         .box4{
+            grid-row-start: 1;
+            grid-row-end: 5;
+            background-color: pink;
+            
+         }
+         .box5{
+            grid-row-start: 1;
+            grid-row-end: 4;
+            background-color: orangered;
+            
+         }
+         .box6{
+            grid-row-start: 1;
+            grid-row-end: 4;
+            background-color: grey;
+            
+         }
+         .box7{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: red;
+            
+         }
+         .box8{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: rgb(228, 6, 6);
+         }
+         .box9{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: royalblue;
+           
+            
+         }
+         .box10{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: darkred;
+         }
+         .box0{
+            grid-row-start: 2;
+            grid-row-end: 6;
+            
+            
+         }
+         
+         
+         
+
+         
+       
+       
+       
+        
+
+             </style>
+</head>
+<center>
+<body  style=" background-attachment: fixed;">
+    <div class="class1">
+        <div> <img src="https://www.jagranimages.com/images/newimg/21082020/21_08_2020-ipl_logo_20650553.jpg" height="40px" width="100px"> </div> <br>
+    <ul  type="none">
+        
+        <li > <a href="iplfinaltouch.html">
+            <h1><i class="bi bi-house-door" style="color: white;"></i></h1>HOME</a></li>
+        <li><a href="iplmatch.html">  <h1><i class="bi bi-gear-wide-connected" style="color: white;"></i></h1> MATCHES</a></li>
+        <li><a href="#"><h1><i class="bi bi-file-earmark-person" style="color: white;"></i></h1>ABOUT</a></li>
+        <li class="list"><a href="#" class="main2"><h1><i class="bi bi-person-lines-fill" style="color: white;"></i></h1>CONTACT US</a> 
+        <div class="main">
+         <a href="#">LIST 1</a>
+         <a href="#">LIST 2</a>
+      
+         <a href="#">LIST 3</a>
+      
+        </div>
+        
+    </li>
+    <li  > <a href="ipltable.html"><h1><i class="bi bi-table" style="color: white;"></i></h1>PointTable</a></li>
+    <li  > <a href="portp.html"><h1><i class="bi bi-emoji-heart-eyes" style="color: white;"></i></h1>Find Me</a></li>
+ 
+    </ul>
+    
+
+    
+   
+    
+
+</div> <br>
+
+
+ 
+ 
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i2.wp.com/static.toiimg.com/thumb/msid-90180204,width-1280,resizemode-4/90180204.jpg?strip=all" class="d-block w-100" alt="..." height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="https://hindi.insidesport.in/wp-content/uploads/2022/03/Untitled-design-2022-03-24T152728.269-1.png" class="d-block w-100" alt="..." height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cricfacts.com/wp-content/uploads/2022/02/Mumbai-Indians-MI-All-IPL-Seasons-Captains-List-2008-%E2%80%93-2021.jpg" class="d-block w-100" alt="..." height="500px">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="text" style="background-image: url(/img/iplbac.gif); height: 100px;">
+    <h1 style="padding-top: 5px; background-color: black; color: silver;"><i>IPL TEAMS</i></h1>
+  </div>
+
+
+
+
+    <div class="team">
+        <div  class="team1" > <i class="bi bi-award-fill"  style="color: black; padding-right: 130px; font-size: 30px;"></i> 
+            <br><br><br><br><br><br><br><br><br>
+            <h3 >RCB</h3>
+            <p>BATTERS</p>
+                    </div>
+        <div class="team2" ><i class="bi bi-browser-firefox"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >CSK</h3>
+            <p>BATTERS</p>
+           
+        </div>
+    
+        <div  class="team3" ><i class="bi bi-cloud-fog2-fill"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >MI</h3>
+            <p>BATTERS</p>
+         
+           
+        </div>
+        <div  class="team4" ><i class="bi bi-fire"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >RR</h3>
+            <p>BATTERS</p>
+                    </div>
+        <div class="team5" ><i class="bi bi-steam"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >SRH</h3>
+            <p>BATTERS</p>
+           
+        </div>
+        <div  class="team6" ><i class="bi bi-hurricane"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >DC</h3>
+            <p>BATTERS</p>
+                    </div>
+        <div class="team7" ><i class="bi bi-lightning"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >CSK</h3>
+            <p>BATTERS</p>
+           
+        </div>
+    
+        <div  class="team8" ><i class="bi bi-mask"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >LSG</h3>
+            <p>BATTERS</p>
+         
+           
+        </div>
+        <div  class="team9" ><i class="bi bi-pentagon-half"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >GT</h3>
+            <p>BATTERS</p>
+                    </div>
+        <div class="team10" ><i class="bi bi-paypal"  style="color: black; padding-right: 130px; font-size: 30px;"></i><br><br><br><br><br><br><br><br><br>
+            <h3 >PK</h3>
+            <p>BATTERS</p>
+           
+        </div>
+    
+    
+        
+
+
+    </div>
+    
+    <div class="text" style="background-image: url(/img/iplbac.gif); height: 50px;"><h1><b>  <i> LEGENDS OF ALL TEAMS</i></b></h1>
+    </div>
+
+
+    <div class="icard">
+        <div class="card1" style="width: 18rem; height: 390px; padding: 20px; margin: 20px; margin-top: 50px;" >
+            <img src="https://i.pinimg.com/564x/c9/c0/71/c9c0714df473114f9b053b6e8f66c3a4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"> <b> Fans dont wanr to move on by AB Divillers want to come and play again for RCB.</b></p>
+            </div>
+          </div>
+
+          <div class="card2" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://i.pinimg.com/564x/8b/9e/d2/8b9ed250456c60d74657f1a647d3101d.jpg" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"><b>Fans dont wanr to move on by Sachin want to come and play again for MI.</b></p>
+            </div>
+          </div>
+    
+
+          <div class="card3" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://i.pinimg.com/564x/90/c3/ee/90c3ee754f1f01482a01fc43e6f6b177.jpg" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"><b>Fans dont want to move on by  macclam want to come and play again for CSK.</b></p>
+            </div>
+          </div>
+          <div class="card4" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://im.rediff.com/cricket/2010/aug/26jayawardene.jpg" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"><b>Fans dont wanr to move on by verdhane want to come and play again for PK.</b></p>
+            </div>
+          </div>
+    
+
+          <div class="card5" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://www.mykhel.com/img/2015/05/16-1431800257-shanewatsonton-ipl8-kkr-600.jpg" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"><b> Fans dont want to move on by Watson want to come and play again for RR.</b></p>
+            </div>
+          </div>
+         
+          <div class="card6" style="width: 18rem; height: 390px; padding: 20px; margin: 20px; margin-top: 50px;" >
+            <img src="https://im.rediff.com/cricket/2017/apr/13gambhir-fifty.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"> <b> Fans dont wanr to move on by Ghambir want to come and play again for KKR.</b></p>
+            </div>
+          </div>
+
+          <div class="card7" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2021/12/23/2ffd2873d95b9bbcb4c2979efd5a1011_original.jpg" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"> <b> Fans dont wanr to move on by Shehwag want to come and play again for SRH.</b></p>
+            </div>
+          </div>
+    
+
+          <div class="card8" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://www.sportzcraazy.com/wp-content/uploads/2020/02/Virender-Sehwag-ipl.jpg" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"> <b> Fans dont want to move on by Steyn want to come and play again for DC.</b></p>
+            </div>
+          </div>
+          <div class="card9" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://im.rediff.com/cricket/2022/may/25nehra.gif" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"> <b>  Fans dont wanr to move on by Nehra want to come and play again for GT.</b></p>
+            </div>
+          </div>
+    
+
+          <div class="card10" style="width: 18rem; height: 390px; padding: 20px; margin: 30px;margin-top: 50px;" >
+            <img src="https://library.sportingnews.com/2023-03/Untitled%20design%20%2845%29.png" class="card-img-top" alt="..." height="260">
+            <div class="card-body">
+              <p class="card-text"> <b> Fans dont want to move on by dilore want to come and play again for LSG.</b></p>
+            </div>
+          </div>
+         
+    
+
+    </div>
+    <div class="text" style="background-image: url(/img/iplbac.gif); height: 50px;"><h1><b>  <i> Champions List</i></b></h1>
+    </div>
+
+    <div class="progbar">
+        <img src="https://media3.giphy.com/media/LwDqTLvIBk2kI089H6/giphy.gif?cid=ecf05e473yx0km5dnq54wkznfarod3ngbridxf1rrg8ai0qv&ep=v1_gifs_search&rid=giphy.gif&ct=g" width="400px"
+        height="400px" alt="" style="border: 1px solid seashell;">
+        <div  class="box0" style="background-color: goldenrod;"><h1><b><i> TROPHY</i>
+        </b></h1></div>
+    
+    <div  class="box1">MI <br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br>5<i class="bi bi-trophy-fill"></i> </div>
+    
+    <div class="box2">CSK<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>4<i class="bi bi-trophy-fill"></i></div>
+    <div class="box3">KKR<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br> 2<i class="bi bi-trophy-fill"></i></div>
+    <div class="box4">RR<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br> 2<i class="bi bi-trophy-fill"></i></div>
+    <div class="box5">SRH<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br>1<i class="bi bi-trophy-fill"></i></div>
+    <div class="box6">GT<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br>1<i class="bi bi-trophy-fill"></i></div>
+    <div class="box7">DC<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><i class="bi bi-star-fill"></i></div>
+    <div class="box8">PK<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><i class="bi bi-star-fill"></i></div>
+    <div class="box9">LSG<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><i class="bi bi-star-fill"></i></div>
+    <div class="box10">RCB<br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><i class="bi bi-star-fill"></i></div>
+    
+
+
+    </div>
+    <div width="100%" height="500px" style="background-color: rgba(55, 54, 54, 0.655); color:gray; display: flex; justify-content: space-around;">
+    <div>
+        <address>
+            Sai nagar  <br>,Ameerpet
+            hyderabad ,<br> 150006 <br>
+            contactus - 9584017443; <br>
+            @1999shivmr.kankaney@gmail.co,
+        </address>
+    </div>
+    <div>
+follow us on : <br>
+Facebook <br>
+instragram <br>
+twitter
+
+    </div>
+    <div> for more information <br> visit : www.iplt20.com</div>
+    </div>
+
+<div style="background-color: white;">
+
+<p> @COPYRIGHT1999SHIVAMR.KANKANEY@GMAIL.COM</p></div>
+ 
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   </body>
+</center>
+</html>
